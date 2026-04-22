@@ -10,5 +10,6 @@ WUPS_USE_STORAGE("ArroU");
 
 INITIALIZE_PLUGIN()
 {
+    NotificationModule_InitLibrary();
     NotificationModule_AddInfoNotification("ArroU");
 }

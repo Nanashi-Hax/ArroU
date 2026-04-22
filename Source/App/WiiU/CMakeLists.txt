@@ -34,10 +34,10 @@ target_link_directories(ArroU PRIVATE
 )
 
 target_link_libraries(ArroU PRIVATE
-    wut
-    wups
-    wums
     notifications
+    wums
+    wups
+    wut
 )
 
 set_target_properties(ArroU PROPERTIES SUFFIX ".elf")
