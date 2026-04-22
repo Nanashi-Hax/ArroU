@@ -1,0 +1,54 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "MSYS Makefiles"
+    },
+    {
+      "name": "Wiiu",
+      "inherits": "base",
+      "binaryDir": "Build/WiiU",
+      "toolchainFile": "${sourceDir}/ToolChain/WiiU.cmake",
+      "cacheVariables": {
+        "PLATFORM": "WiiU"
+      }
+    },
+    {
+      "name": "Windows",
+      "inherits": "base",
+      "binaryDir": "Build/Windows",
+      "cacheVariables": {
+        "PLATFORM": "Windows"
+      }
+    },
+    {
+      "name": "Test",
+      "inherits": "base",
+      "binaryDir": "Build/Test",
+      "cacheVariables": {
+        "PLATFORM": "Test"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Wiiu",
+      "configurePreset": "Wiiu"
+    },
+    {
+      "name": "Windows",
+      "configurePreset": "Windows"
+    },
+    {
+      "name": "Test",
+      "configurePreset": "Test"
+    }
+  ]
+}

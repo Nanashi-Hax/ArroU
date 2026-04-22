@@ -1,0 +1,29 @@
+set(CMAKE_SYSTEM_NAME WiiU)
+set(CMAKE_SYSTEM_PROCESSOR powerpc)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+set(WUT "$ENV{DEVKITPRO}/wut")
+set(WUPS "$ENV{DEVKITPRO}/wups")
+set(WUMS "$ENV{DEVKITPRO}/wums")
+
+set(_WIIU_GCC "powerpc-eabi-gcc.exe")
+set(_WIIU_GXX "powerpc-eabi-g++.exe")
+set(_WIIU_AR "powerpc-eabi-ar.exe")
+set(_WIIU_OBJCOPY "powerpc-eabi-objcopy.exe")
+set(_WIIU_OBJDUMP "powerpc-eabi-objdump.exe")
+set(_WIIU_RANLIB "powerpc-eabi-ranlib.exe")
+
+set(CMAKE_C_COMPILER "${_WIIU_GCC}")
+set(CMAKE_CXX_COMPILER "${_WIIU_GXX}")
+set(CMAKE_ASM_COMPILER "${_WIIU_GCC}")
+set(CMAKE_AR "${_WIIU_AR}")
+set(CMAKE_OBJCOPY "${_WIIU_OBJCOPY}")
+set(CMAKE_OBJDUMP "${_WIIU_OBJDUMP}")
+set(CMAKE_RANLIB "${_WIIU_RANLIB}")
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
