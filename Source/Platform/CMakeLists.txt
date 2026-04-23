@@ -1,0 +1,11 @@
+message(STATUS "Target PLATFORM: ${PLATFORM}")
+
+if(PLATFORM STREQUAL "Windows")
+    add_subdirectory(Windows)
+elseif(PLATFORM STREQUAL "WiiU")
+    add_subdirectory(WiiU)
+elseif(PLATFORM STREQUAL "Test")
+    add_subdirectory(Test)
+else()
+    message(FATAL_ERROR "Unknown PLATFORM: ${PLATFORM}")
+endif()

@@ -1,0 +1,6 @@
+{
+    "clangd.arguments": [
+      "--query-driver=D:/devkitPro/devkitPPC/bin/powerpc-eabi-g++.exe",
+      "--query-driver=D:/msys64/mingw64/bin/g++.exe"
+    ]
+}

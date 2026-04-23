@@ -11,6 +11,7 @@ if not exist "%DEVKITPRO_WIN%" (
 )
 
 set DEVKITPRO=%DEVKITPRO_WIN%
+set PRESET=%1
 
 cmake --preset %PRESET%
 if errorlevel 1 exit /b %errorlevel%

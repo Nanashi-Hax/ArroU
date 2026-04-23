@@ -12,7 +12,7 @@
       "generator": "Ninja"
     },
     {
-      "name": "Wiiu",
+      "name": "WiiU",
       "inherits": "base",
       "binaryDir": "Build/WiiU",
       "toolchainFile": "${sourceDir}/ToolChain/WiiU.cmake",
@@ -39,8 +39,8 @@
   ],
   "buildPresets": [
     {
-      "name": "Wiiu",
-      "configurePreset": "Wiiu"
+      "name": "WiiU",
+      "configurePreset": "WiiU"
     },
     {
       "name": "Windows",

@@ -2,5 +2,6 @@
 
 class INetwork
 {
-
+public:
+    virtual ~INetwork() = default;
 };
