@@ -1,6 +1,6 @@
 add_library(Platform
     TestLogger.cpp
-    TestNetwork.cpp
+    TestStream.cpp
 )
 
 target_include_directories(Platform PRIVATE

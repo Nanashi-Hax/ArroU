@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Interface/IStream.hpp"
+#include "Core/Stream.hpp"
 #include "Core/Logger.hpp"
 
 class App
@@ -10,6 +10,6 @@ public:
     int run();
 
 private:
-    IStream* stream;
+    Stream stream;
     Logger logger;
 };

@@ -4,6 +4,9 @@ App::App(IStream* stream, ILogger* logger) : stream(stream), logger(logger) {}
 
 int App::run()
 {
-    logger.logf("Hello Test {}", 1);
+    stream.write<int>(5);
+    int res;
+    stream.read<int>(res);
+    logger.logf("Hello Test {}", res);
     return 0;
 }

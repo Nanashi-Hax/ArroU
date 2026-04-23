@@ -2,6 +2,9 @@
 
 #include "Interface/IStream.hpp"
 
+#include <vector>
+#include <cstdint>
+
 class TestStream : public IStream
 {
 public:
@@ -9,5 +12,6 @@ public:
     bool read(void* data, size_t size);
 
 private:
-    int buffer;
+    std::vector<uint8_t> buffer;
+    size_t readPos = 0;
 };
