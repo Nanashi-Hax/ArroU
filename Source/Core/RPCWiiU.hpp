@@ -35,7 +35,7 @@ class WiiUServer
 public:
     explicit WiiUServer(Stream& s);
 
-    void dispatch(IWiiUService* service);
+    bool dispatch(IWiiUService* service);
 
 private:
     Stream& stream;

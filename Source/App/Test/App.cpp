@@ -9,7 +9,11 @@ int App::run()
     PCServer server(stream);
 
     client.log("Hello");
-    server.dispatch(pc);
+    if(!server.dispatch(pc))
+    {
+        logger.error("dispatch failed");
+        return 1;
+    }
 
     return 0;
 }

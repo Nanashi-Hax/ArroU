@@ -9,22 +9,24 @@ void WiiUClient::launchTitle(uint64_t title)
 
 WiiUServer::WiiUServer(Stream& s) : stream(s) {}
 
-void WiiUServer::dispatch(IWiiUService* service)
+bool WiiUServer::dispatch(IWiiUService* service)
 {
     uint16_t id;
     uint16_t cmd;
 
-    stream.read(id);
-    stream.read(cmd);
+    if (!stream.read(id)) return false;
+    if (!stream.read(cmd)) return false;
 
     switch(static_cast<WiiUCommand>(cmd))
     {
         case WiiUCommand::LaunchTitle:
         {
             uint64_t title;
-            stream.read(title);
+            if (!stream.read(title)) return false;
             service->launchTitle(title);
-            break;
+            return true;
         }
+
+        default: return false;
     }
 }

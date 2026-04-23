@@ -5,5 +5,6 @@
 class TestLogger : public ILogger
 {
 public:
-    void log(std::string);
+    void info(std::string) override;
+    void error(std::string) override;
 };

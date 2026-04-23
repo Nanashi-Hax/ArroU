@@ -35,7 +35,7 @@ class PCServer
 public:
     explicit PCServer(Stream& s);
 
-    void dispatch(IPCService* service);
+    bool dispatch(IPCService* service);
 
 private:
     Stream& stream;

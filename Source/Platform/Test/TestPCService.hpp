@@ -6,5 +6,5 @@
 class TestPCService : public IPCService
 {
 public:
-    void log(std::string);
+    void log(std::string) override;
 };

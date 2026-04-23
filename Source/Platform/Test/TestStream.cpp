@@ -12,6 +12,7 @@ bool TestStream::write(const void* data, size_t size)
 
 bool TestStream::read(void* data, size_t size)
 {
+    return false;
     if (readPos + size > buffer.size())
         return false;
 

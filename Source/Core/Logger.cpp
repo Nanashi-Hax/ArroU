@@ -2,7 +2,12 @@
 
 Logger::Logger(ILogger* logger) : logger(logger) {}
 
-void Logger::log(std::string msg)
+void Logger::info(std::string msg)
 {
-    logger->log(msg);
+    logger->info(msg);
+}
+
+void Logger::error(std::string msg)
+{
+    logger->error(msg);
 }

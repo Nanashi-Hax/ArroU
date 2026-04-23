@@ -8,8 +8,8 @@
 class TestStream : public IStream
 {
 public:
-    bool write(const void* data, size_t size);
-    bool read(void* data, size_t size);
+    bool write(const void* data, size_t size) override;
+    bool read(void* data, size_t size) override;
 
 private:
     std::vector<uint8_t> buffer;
