@@ -1,15 +1,15 @@
 #pragma once
 
-#include "Interface/INetwork.hpp"
+#include "Interface/IStream.hpp"
 #include "Core/Logger.hpp"
 
 class App
 {
 public:
-    App(INetwork*, ILogger*);
+    App(IStream*, ILogger*);
     int run();
 
 private:
-    INetwork* network;
+    IStream* stream;
     Logger logger;
 };

@@ -1,15 +1,15 @@
-#include "Interface/INetwork.hpp"
+#include "Interface/IStream.hpp"
 #include "Interface/ILogger.hpp"
 
-#include "Platform/Test/TestNetwork.hpp"
+#include "Platform/Test/TestStream.hpp"
 #include "Platform/Test/TestLogger.hpp"
 
 #include "App/Test/App.hpp"
 
 int main()
 {
-    INetwork* network = new TestNetwork();
+    IStream* stream = new TestStream();
     ILogger* logger = new TestLogger();
-    App app(network, logger);
+    App app(stream, logger);
     return app.run();
 }

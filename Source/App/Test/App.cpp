@@ -1,6 +1,6 @@
 #include "App/Test/App.hpp"
 
-App::App(INetwork* network, ILogger* logger) : network(network), logger(logger) {}
+App::App(IStream* stream, ILogger* logger) : stream(stream), logger(logger) {}
 
 int App::run()
 {

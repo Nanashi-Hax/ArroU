@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Interface/ILogger.hpp"
 
 #include <format>
