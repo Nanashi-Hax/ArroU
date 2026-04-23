@@ -1,8 +1,10 @@
 #pragma once
 
+#include <string>
+
 class IPCService
 {
 public:
     virtual ~IPCService() = default;
-    virtual void log(char const *) = 0;
+    virtual void log(std::string) = 0;
 };

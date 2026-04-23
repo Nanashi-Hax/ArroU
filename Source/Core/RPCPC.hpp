@@ -11,7 +11,7 @@ enum class PCCommand : uint16_t
 class PCClient
 {
 public:
-    PCClient(Stream& s);
+    explicit PCClient(Stream& s);
 
     void log(std::string);
 
@@ -33,9 +33,9 @@ private:
 class PCServer
 {
 public:
-    PCServer(Stream& s);
+    explicit PCServer(Stream& s);
 
-    void dispatch(IPCService& service);
+    void dispatch(IPCService* service);
 
 private:
     Stream& stream;

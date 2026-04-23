@@ -11,7 +11,7 @@ enum class WiiUCommand : uint16_t
 class WiiUClient
 {
 public:
-    WiiUClient(Stream& s);
+    explicit WiiUClient(Stream& s);
 
     void launchTitle(uint64_t title);
 
@@ -33,9 +33,9 @@ private:
 class WiiUServer
 {
 public:
-    WiiUServer(Stream& s);
+    explicit WiiUServer(Stream& s);
 
-    void dispatch(IWiiUService& service);
+    void dispatch(IWiiUService* service);
 
 private:
     Stream& stream;
