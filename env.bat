@@ -1,0 +1,1 @@
+set DEVKITPRO_WIN=D:/devkitPro

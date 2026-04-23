@@ -13,3 +13,13 @@ INITIALIZE_PLUGIN()
     NotificationModule_InitLibrary();
     NotificationModule_AddInfoNotification("ArroU");
 }
+
+ON_APPLICATION_START()
+{
+
+}
+
+ON_APPLICATION_ENDS()
+{
+    NotificationModule_AddInfoNotification("Ends");
+}

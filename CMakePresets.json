@@ -9,7 +9,7 @@
     {
       "name": "base",
       "hidden": true,
-      "generator": "MSYS Makefiles"
+      "generator": "Ninja"
     },
     {
       "name": "Wiiu",
